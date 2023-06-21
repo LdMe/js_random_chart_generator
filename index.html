@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section id="options">
+        <form action="">
+            <select name="type" id="type">
+                <option value="bar">Barras</option>
+                <option value="line">Lineas</option>
+                <option value="pie">Torta</option>
+                <option value="doughnut">Donuts</option>
+                <option value="radar">Radar</option>
+                <option value="polarArea">Polar</option>
+            </select>
+        </form>
+        <form id="data-form">
+            <legend>Generar datos</legend>
+            <label for="min">Mínimo</label>
+            <input type="number" name="min" placeholder="Mínimo" value="0">
+            <label for="max">Máximo</label>
+            <input type="number" name="max" placeholder="Máximo" value="100">
+            <label for="qty">Cantidad de datos</label>
+            <input type="number" name="qty" placeholder="Cantidad de datos" value="10">
+            <label for="direction">Dirección</label>
+            <select name="direction">
+                <option value="up">Ascendente</option>
+                <option value="down">Descendente</option>
+            </select>
+            <label for="trend">Tendencia</label>
+            <select name="trend">
+                <option value="linear">Lineal</option>
+                <option value="random">Aleatorio</option>
+                <option value="sin">Seno</option>
+                <option value="cos">Coseno</option>
+                <option value="exp">Exponencial</option>
+                <option value="log">Logaritmo</option>
+                <option value="sqrt">Raíz cuadrada</option>
+                <option value="pow">Potencia</option>
+                <option value="binary">Binario</option>
+            </select>
+            <button type="submit">Generar</button>
+        </form>
+    </section>
+    <section id="chart">
+        <canvas id="myChart"></canvas>
+    </section>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
